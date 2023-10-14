@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<wxs src="../../utils/chs.wxs" module="chs" /> {{chs.setTraditional(isTraditional)}}
+<!--繁简转化配置-->
+<view class="container">
+  <view class="traditional">
+    <view bindtap='switchTab' data-index='0' class="{{isTraditional === false ? 'menu_highlighted' : 'menu_normal'}}">
+      {{chs.convert('简体')}}
+    </view>
+    <view bindtap='switchTab' data-index='1' class="{{isTraditional ? 'menu_highlighted' : 'menu_normal'}}">
+      {{chs.convert('繁体')}}
+    </view>
+  </view>
+  <view class="harmony">{{chs.convert(harmonyOS)}}</view>
+</view>
