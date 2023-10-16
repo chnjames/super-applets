@@ -1,6 +1,6 @@
 // 获取应用实例
 const app = getApp()
-var convertChs = require('../../utils/simp_trad_chs.js');
+const convertChs = require('../../utils/simp_trad_chs.js');
 
 Page({
   data: {
@@ -32,7 +32,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad() {
-    var that = this
+    const that = this
     that.setData({
       isTraditional: app.globalData.isTraditional
     })
